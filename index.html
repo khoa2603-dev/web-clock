@@ -1,0 +1,2738 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đồng Hồ Đếm Ngược 5 Phút - Kiểm Tra Chạy Trạm (J97 Full Songs)</title>
+    <meta name="description" content="Đồng hồ đếm ngược phong cách Notion tối giản với âm thanh 5s bài hát J97 nguyên bản, tự do chọn đoạn phát">
+    <!-- Google Fonts: Inter & JetBrains Mono (Chuẩn Notion UI) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Boxicons CDN (Chuẩn NotionIcons) -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        /* ===== HỆ THỐNG MÀU SẮC CHUẨN NOTION ===== */
+        :root {
+            --bg-page: #ffffff;
+            --bg-card: #ffffff;
+            --bg-secondary: #f7f6f3;
+            --bg-hover: rgba(55, 53, 47, 0.06);
+            --bg-active: rgba(55, 53, 47, 0.1);
+            --border-color: rgba(55, 53, 47, 0.12);
+            --border-subtle: rgba(55, 53, 47, 0.08);
+            --text-primary: #37352f;
+            --text-secondary: #787774;
+            --text-muted: #9b9a97;
+            --icon-black: #000000;
+            --notion-shadow: 0 1px 3px rgba(15, 15, 15, 0.06), 0 2px 6px rgba(15, 15, 15, 0.04);
+            --notion-shadow-lg: 0 12px 32px rgba(15, 15, 15, 0.08), 0 2px 6px rgba(15, 15, 15, 0.04);
+            
+            --tag-gray-bg: rgba(227, 226, 224, 0.5);
+            --tag-gray-text: #32302c;
+            --tag-blue-bg: rgba(211, 229, 239, 0.6);
+            --tag-blue-text: #185a85;
+            --tag-yellow-bg: rgba(253, 236, 200, 0.65);
+            --tag-yellow-text: #8f6312;
+            --tag-red-bg: rgba(255, 226, 221, 0.65);
+            --tag-red-text: #9f2b20;
+            --tag-green-bg: rgba(219, 237, 219, 0.65);
+            --tag-green-text: #286438;
+            --tag-purple-bg: rgba(232, 222, 238, 0.65);
+            --tag-purple-text: #694085;
+            --tag-orange-bg: rgba(250, 222, 201, 0.7);
+            --tag-orange-text: #8f4d1a;
+        }
+
+        [data-theme="dark"] {
+            --bg-page: #191919;
+            --bg-card: #202020;
+            --bg-secondary: #262626;
+            --bg-hover: rgba(255, 255, 255, 0.06);
+            --bg-active: rgba(255, 255, 255, 0.12);
+            --border-color: rgba(255, 255, 255, 0.12);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --text-primary: #ffffff;
+            --text-secondary: #9b9a97;
+            --text-muted: #6f6e6b;
+            --icon-black: #ffffff;
+            --notion-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+            --notion-shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+
+            --tag-gray-bg: rgba(90, 90, 90, 0.35);
+            --tag-gray-text: #d4d4d4;
+            --tag-blue-bg: rgba(35, 75, 110, 0.4);
+            --tag-blue-text: #85c2e8;
+            --tag-yellow-bg: rgba(100, 80, 30, 0.45);
+            --tag-yellow-text: #f0c56b;
+            --tag-red-bg: rgba(110, 40, 40, 0.45);
+            --tag-red-text: #f38b82;
+            --tag-green-bg: rgba(40, 90, 50, 0.45);
+            --tag-green-text: #7bc78f;
+            --tag-purple-bg: rgba(85, 45, 115, 0.45);
+            --tag-purple-text: #cfabeb;
+            --tag-orange-bg: rgba(110, 60, 25, 0.45);
+            --tag-orange-text: #f6ad55;
+        }
+
+        [data-theme="warm"] {
+            --bg-page: #fbfbfa;
+            --bg-card: #ffffff;
+            --bg-secondary: #f1f0eb;
+            --border-color: #e5e4de;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 20px;
+            transition: background-color 0.25s ease, color 0.25s ease;
+        }
+
+        .bx {
+            font-size: 1.25rem;
+            color: var(--icon-black);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+
+        .notion-wrapper {
+            width: 100%;
+            max-width: 880px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin: 0 auto;
+        }
+
+        /* ===== 1. NOTION HEADER ===== */
+        .notion-header {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .notion-top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .notion-breadcrumbs {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+        }
+        .notion-breadcrumbs span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .notion-actions-bar {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .notion-icon-btn {
+            background: transparent;
+            border: 1px solid transparent;
+            border-radius: 6px;
+            padding: 6px 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.15s ease;
+            font-family: inherit;
+        }
+        .notion-icon-btn:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        .page-title-group {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 6px;
+        }
+
+        .notion-page-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: var(--notion-shadow);
+        }
+        .notion-page-icon .bx {
+            font-size: 1.75rem;
+        }
+
+        .page-title-input {
+            font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            font-family: inherit;
+            padding: 4px 6px;
+            border-radius: 6px;
+            transition: background 0.15s ease;
+        }
+        .page-title-input:hover, .page-title-input:focus {
+            background: var(--bg-hover);
+        }
+
+        /* Bảng thuộc tính Notion (Properties Table) */
+        .notion-properties {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px 16px;
+        }
+
+        .prop-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+        }
+        .prop-label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-secondary);
+            min-width: 85px;
+            font-weight: 500;
+        }
+        .prop-label .bx {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .notion-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: filter 0.15s ease;
+        }
+        .notion-badge:hover {
+            filter: brightness(0.95);
+        }
+        .badge-blue { background: var(--tag-blue-bg); color: var(--tag-blue-text); }
+        .badge-green { background: var(--tag-green-bg); color: var(--tag-green-text); }
+        .badge-yellow { background: var(--tag-yellow-bg); color: var(--tag-yellow-text); }
+        .badge-red { background: var(--tag-red-bg); color: var(--tag-red-text); }
+        .badge-gray { background: var(--tag-gray-bg); color: var(--tag-gray-text); }
+        .badge-purple { background: var(--tag-purple-bg); color: var(--tag-purple-text); }
+        .badge-orange { background: var(--tag-orange-bg); color: var(--tag-orange-text); }
+
+        .station-stepper {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 2px 6px;
+        }
+        .step-mini-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            color: var(--text-primary);
+        }
+        .step-mini-btn:hover { background: var(--bg-hover); }
+        .station-num-text {
+            font-weight: 700;
+            font-size: 0.88rem;
+            padding: 0 4px;
+        }
+
+        /* ===== 2. KHỐI ĐỒNG HỒ TỐI GIẢN CHUẨN NOTION ===== */
+        .notion-timer-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: clamp(28px, 4.5vw, 48px) 24px;
+            box-shadow: var(--notion-shadow-lg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 22px;
+            position: relative;
+            transition: all 0.25s ease;
+        }
+
+        .j97-active-banner {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 16px;
+            border-radius: 20px;
+            background: var(--tag-purple-bg);
+            color: var(--tag-purple-text);
+            font-size: 0.82rem;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(-6px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .j97-active-banner.playing {
+            opacity: 1;
+            transform: translateY(0);
+            animation: pulseBanner 1s infinite alternate;
+        }
+        @keyframes pulseBanner {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.04); }
+        }
+
+        .timer-display-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(10px, 3vw, 24px);
+        }
+
+        .time-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .time-digits {
+            font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+            font-size: clamp(5.2rem, 15vw, 11rem);
+            font-weight: 800;
+            line-height: 0.95;
+            letter-spacing: -3px;
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        .time-sublabel {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+        }
+
+        .time-divider {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(4.5rem, 13vw, 9rem);
+            font-weight: 700;
+            line-height: 0.85;
+            color: var(--text-muted);
+            padding-bottom: 20px;
+            animation: softColonPulse 1s infinite;
+        }
+
+        @keyframes softColonPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.25; }
+        }
+
+        .notion-progress-container {
+            width: 100%;
+            max-width: 580px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .progress-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .notion-progress-track {
+            width: 100%;
+            height: 6px;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .notion-progress-fill {
+            height: 100%;
+            width: 100%;
+            background: var(--text-primary);
+            border-radius: 10px;
+            transition: width 0.3s linear, background 0.3s ease;
+        }
+
+        body.state-warning .time-digits { color: #d97706; }
+        body.state-warning .notion-progress-fill { background: #d97706; }
+
+        body.state-danger .time-digits {
+            color: #dc2626;
+            animation: slightTremor 0.5s infinite alternate;
+        }
+        @keyframes slightTremor {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.03); }
+        }
+        body.state-danger .notion-progress-fill { background: #dc2626; }
+
+        /* ===== 3. NÚT ĐIỀU KHIỂN NOTION ===== */
+        .controls-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .preset-pills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .preset-btn {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 5px 14px;
+            border-radius: 6px;
+            font-size: 0.84rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            font-family: inherit;
+        }
+        .preset-btn:hover { background: var(--bg-hover); color: var(--text-primary); }
+        .preset-btn.active {
+            background: var(--text-primary);
+            color: var(--bg-card);
+            border-color: var(--text-primary);
+            font-weight: 600;
+        }
+        .preset-btn.active .bx { color: var(--bg-card); }
+
+        .action-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .notion-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 10px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            box-shadow: var(--notion-shadow);
+            transition: all 0.15s ease;
+        }
+        .notion-btn:hover { background: var(--bg-hover); transform: translateY(-1px); }
+        .notion-btn:active { transform: translateY(1px); }
+
+        .notion-btn-primary {
+            background: var(--text-primary);
+            color: var(--bg-card);
+            border-color: var(--text-primary);
+        }
+        .notion-btn-primary .bx { color: var(--bg-card); }
+        .notion-btn-primary:hover { background: rgba(55, 53, 47, 0.85); color: var(--bg-card); }
+        [data-theme="dark"] .notion-btn-primary:hover { background: #e0e0e0; }
+
+        .notion-btn-primary.paused {
+            background: #d97706;
+            border-color: #d97706;
+            color: #ffffff;
+        }
+        .notion-btn-primary.paused .bx { color: #ffffff; }
+
+        .notion-keyboard-hints {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+        .notion-kbd {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        /* ===== 4. MODAL CÀI ĐẶT & TINH CHỈNH ĐOẠN PHÁT 5S J97 ===== */
+        .j97-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+            padding: 20px;
+        }
+        .j97-modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .j97-modal-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 28px 24px;
+            max-width: 680px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--notion-shadow-lg);
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            animation: modalFadeIn 0.25s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from { transform: scale(0.96); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 12px;
+        }
+        .modal-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Danh sách bài hát (Hot Trend & J97) */
+        .song-category-bar {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        .j97-song-tabs {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 6px;
+        }
+
+        .j97-tab-btn {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 8px 10px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            color: var(--text-secondary);
+            transition: all 0.15s ease;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .j97-tab-btn:hover { background: var(--bg-hover); color: var(--text-primary); }
+        .j97-tab-btn.active {
+            background: var(--tag-purple-bg);
+            border-color: var(--tag-purple-text);
+            color: var(--tag-purple-text);
+            font-weight: 700;
+        }
+
+        /* KHU VỰC ĐIỀU CHỈNH TRỰC TIẾP ĐOẠN PHÁT (TRIMMER BOX) */
+        .trimmer-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .trimmer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .current-song-headline {
+            font-size: 1.05rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Thanh trượt kéo tua thời gian */
+        .slider-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .slider-track-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .audio-timeline-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 10px;
+            border-radius: 6px;
+            background: var(--border-color);
+            outline: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .audio-timeline-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--text-primary);
+            cursor: pointer;
+            border: 3px solid var(--bg-card);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            transition: transform 0.15s ease;
+        }
+        .audio-timeline-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+
+        .slider-time-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Khung hiển thị chi tiết thời gian phát */
+        .segment-display-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 14px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .segment-time-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+        .time-chip {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 1.05rem;
+        }
+
+        /* Nút tăng/giảm tinh chỉnh giây */
+        .stepper-btn-group {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .nudge-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.15s ease;
+        }
+        .nudge-btn:hover { background: var(--bg-hover); }
+
+        /* Gợi ý đoạn hay kinh điển (Preset Clips) */
+        .clip-preset-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .clip-preset-title {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .clip-preset-pills {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .clip-pill-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .clip-pill-btn:hover { background: var(--bg-hover); color: var(--text-primary); }
+        .clip-pill-btn.active {
+            background: var(--tag-purple-bg);
+            border-color: var(--tag-purple-text);
+            color: var(--tag-purple-text);
+            font-weight: 700;
+        }
+
+        /* Nút nghe thử đoạn 5s đã chọn */
+        .preview-action-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .btn-test-segment {
+            flex: 1;
+            background: var(--text-primary);
+            color: var(--bg-card);
+            border: 1px solid var(--text-primary);
+            padding: 11px 16px;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        .btn-test-segment:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+        .btn-test-segment.playing {
+            background: #d97706;
+            border-color: #d97706;
+        }
+
+        /* Tùy chỉnh MP3 tải lên */
+        .mp3-custom-section {
+            background: var(--bg-secondary);
+            border: 1px dashed var(--border-color);
+            border-radius: 8px;
+            padding: 10px 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 0.82rem;
+        }
+        .mp3-custom-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* ===== 5. CALLOUT KHI HẾT GIỜ ===== */
+        .timesup-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+            padding: 20px;
+        }
+        .timesup-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .timesup-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 34px 28px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: var(--notion-shadow-lg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 16px;
+            animation: modalFadeIn 0.25s ease;
+        }
+
+        .theme-dropdown {
+            position: absolute;
+            top: 45px;
+            right: 0;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: var(--notion-shadow-lg);
+            padding: 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            z-index: 100;
+            min-width: 160px;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-6px);
+            transition: all 0.2s ease;
+        }
+        .theme-dropdown.active {
+            opacity: 1;
+            pointer-events: all;
+            transform: translateY(0);
+        }
+
+        .theme-option {
+            background: transparent;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            text-align: left;
+            font-family: inherit;
+        }
+        .theme-option:hover { background: var(--bg-hover); }
+        .theme-option.active { background: var(--bg-secondary); font-weight: 600; }
+
+        .notion-footer {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 24px;
+        }
+
+        /* ===== MODAL TÙY CHỈNH THỜI GIAN CHUẨN NOTION ===== */
+        .custom-time-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+            padding: 20px;
+        }
+        .custom-time-modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .custom-time-modal-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 26px 24px;
+            max-width: 620px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--notion-shadow-lg);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            animation: modalFadeIn 0.25s ease;
+        }
+
+        .time-editor-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 18px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .time-editor-inputs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .time-input-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .time-input-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .time-input-stepper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 4px 8px;
+            box-shadow: var(--notion-shadow);
+        }
+
+        .stepper-arrow-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 0;
+            border-radius: 4px;
+            color: var(--text-secondary);
+            transition: all 0.15s ease;
+        }
+        .stepper-arrow-btn:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+        .stepper-arrow-btn .bx {
+            font-size: 1.35rem;
+        }
+
+        .custom-num-input {
+            width: 95px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.8rem;
+            font-weight: 800;
+            text-align: center;
+            border: none;
+            background: transparent;
+            color: var(--text-primary);
+            outline: none;
+            padding: 0;
+            -moz-appearance: textfield;
+            line-height: 1;
+        }
+        .custom-num-input::-webkit-outer-spin-button,
+        .custom-num-input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .time-inputs-colon {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            padding-top: 14px;
+        }
+
+        .quick-adjust-chips {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nudge-chip {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+            transition: all 0.15s ease;
+        }
+        .nudge-chip:hover {
+            background: var(--bg-hover);
+            transform: translateY(-1px);
+        }
+
+        .time-slider-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 2px;
+        }
+
+        .custom-presets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+            gap: 6px;
+            width: 100%;
+        }
+
+        .preset-pill-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 7px 8px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            transition: all 0.15s ease;
+            font-family: inherit;
+        }
+        .preset-pill-btn:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+        .preset-pill-btn.active {
+            background: var(--text-primary);
+            color: var(--bg-card);
+            border-color: var(--text-primary);
+            font-weight: 700;
+        }
+        .preset-pill-btn.active .bx {
+            color: var(--bg-card);
+        }
+
+        .custom-time-info-note {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-subtle);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .custom-time-footer-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 12px;
+        }
+
+        .btn-apply-start {
+            background: #286438;
+            border: 1px solid #286438;
+            color: #ffffff;
+        }
+        .btn-apply-start .bx { color: #ffffff; }
+        .btn-apply-start:hover {
+            background: #1e4b2a;
+            color: #ffffff;
+        }
+
+        /* Nút Tùy Chỉnh trên thanh preset */
+        .preset-btn.custom-trigger-btn {
+            background: var(--tag-blue-bg);
+            border-color: var(--tag-blue-text);
+            color: var(--tag-blue-text);
+            font-weight: 600;
+        }
+        .preset-btn.custom-trigger-btn:hover {
+            filter: brightness(0.95);
+        }
+        .preset-btn.custom-trigger-btn.active {
+            background: var(--tag-blue-text);
+            color: #ffffff;
+            border-color: var(--tag-blue-text);
+        }
+        .preset-btn.custom-trigger-btn.active .bx {
+            color: #ffffff;
+        }
+
+        /* Đồng hồ tương tác nhấp đổi giờ */
+        .timer-display-box {
+            cursor: pointer;
+            position: relative;
+            padding: 8px 16px;
+            border-radius: 12px;
+            transition: background 0.2s ease;
+        }
+        .timer-display-box:hover {
+            background: var(--bg-hover);
+        }
+        .timer-display-box::after {
+            content: "Nhấp để đổi thời gian (T)";
+            position: absolute;
+            bottom: -6px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+            opacity: 0;
+            transform: translateY(4px);
+            transition: all 0.2s ease;
+            pointer-events: none;
+        }
+        .timer-display-box:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 640px) {
+            body { padding: 14px 10px; }
+            .notion-properties { grid-template-columns: 1fr; }
+            .action-buttons { flex-direction: column; width: 100%; }
+            .notion-btn { width: 100%; }
+            .notion-keyboard-hints { display: none; }
+            .segment-display-row { flex-direction: column; align-items: flex-start; }
+            .custom-time-footer-actions { flex-direction: column; width: 100%; }
+            .custom-time-footer-actions > * { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="notion-wrapper">
+        <!-- ===== 1. NOTION HEADER ===== -->
+        <header class="notion-header">
+            <div class="notion-top-nav">
+                <div class="notion-breadcrumbs">
+                    <span><i class='bx bx-book'></i> Khóa học</span>
+                    <span>/</span>
+                    <span><i class='bx bx-notepad'></i> Bài thi</span>
+                    <span>/</span>
+                    <span style="color:var(--text-primary); font-weight:600;"><i class='bx bx-stopwatch'></i> Chạy trạm</span>
+                </div>
+
+                <div class="notion-actions-bar">
+                    <!-- Nút mở tùy chỉnh thời gian -->
+                    <button class="notion-icon-btn" id="openCustomTimeNavBtn" title="Tùy chỉnh thời gian làm bài (Phím T)">
+                        <i class='bx bx-time-five'></i>
+                        <span id="customTimeNavLabel">05:00</span>
+                    </button>
+
+                    <!-- Nút mở bảng chỉnh đoạn nhạc J97 -->
+                    <button class="notion-icon-btn" id="openJ97Btn" title="Điều chỉnh đoạn phát 5s bài hát J97">
+                        <i class='bx bx-music'></i>
+                        <span id="currentJ97NavLabel">Sóng Gió (03:45)</span>
+                    </button>
+
+                    <!-- Chế độ sáng tối -->
+                    <div style="position:relative;">
+                        <button class="notion-icon-btn" id="themeBtn" title="Giao diện">
+                            <i class='bx bx-sun' id="themeIcon"></i>
+                            <span id="themeLabel">Sáng</span>
+                        </button>
+                        <div class="theme-dropdown" id="themeDropdown">
+                            <button class="theme-option active" data-theme="light"><i class='bx bx-sun'></i> Notion Light</button>
+                            <button class="theme-option" data-theme="dark"><i class='bx bx-moon'></i> Notion Dark</button>
+                            <button class="theme-option" data-theme="warm"><i class='bx bx-coffee'></i> Giấy Ấm (Warm)</button>
+                        </div>
+                    </div>
+
+                    <!-- Âm thanh -->
+                    <button class="notion-icon-btn" id="soundBtn" title="Bật/Tắt âm thanh (M)">
+                        <i class='bx bx-volume-full' id="soundIcon"></i>
+                    </button>
+
+                    <!-- Toàn màn hình -->
+                    <button class="notion-icon-btn" id="fullscreenBtn" title="Toàn màn hình (F)">
+                        <i class='bx bx-fullscreen'></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Page Title -->
+            <div class="page-title-group">
+                <div class="notion-page-icon">
+                    <i class='bx bx-book-open'></i>
+                </div>
+                <input type="text" class="page-title-input" id="pageTitle" value="Đồng Hồ Đếm Ngược Kiểm Tra Chạy Trạm" title="Nhấp để sửa tiêu đề">
+            </div>
+
+            <!-- Properties Table -->
+            <div class="notion-properties">
+                <div class="prop-item">
+                    <div class="prop-label"><i class='bx bx-map-pin'></i> Vị trí:</div>
+                    <div class="station-stepper">
+                        <button class="step-mini-btn" id="prevStationBtn" title="Trạm trước (P)"><i class='bx bx-chevron-left'></i></button>
+                        <span class="station-num-text" id="stationDisplay">Trạm 1</span>
+                        <button class="step-mini-btn" id="nextStationBtn" title="Trạm tiếp theo (N)"><i class='bx bx-chevron-right'></i></button>
+                    </div>
+                </div>
+
+                <div class="prop-item">
+                    <div class="prop-label"><i class='bx bx-check-circle'></i> Trạng thái:</div>
+                    <span class="notion-badge badge-blue" id="statusBadge">
+                        <i class='bx bx-circle'></i> Sẵn sàng
+                    </span>
+                </div>
+
+                <div class="prop-item">
+                    <div class="prop-label"><i class='bx bx-music'></i> Nhạc 5s:</div>
+                    <span class="notion-badge badge-purple" id="j97Badge" title="Nhấp để chỉnh trực tiếp đoạn phát">
+                        <i class='bx bx-slider-alt'></i> <span id="j97BadgeText">Sóng Gió (03:45)</span>
+                    </span>
+                </div>
+
+                <div class="prop-item">
+                    <div class="prop-label"><i class='bx bx-time-five'></i> Thời lượng:</div>
+                    <span class="notion-badge badge-gray" id="durationBadge" title="Nhấp để tùy chỉnh thời gian làm bài (Phím T)">
+                        <i class='bx bx-slider-alt'></i> <span id="durationBadgeText">5 phút / trạm</span>
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== 2. KHỐI ĐỒNG HỒ TỐI GIẢN CHUẨN NOTION ===== -->
+        <main class="notion-timer-card">
+            <div class="j97-active-banner" id="j97ActiveBanner">
+                <i class='bx bx-equalizer'></i>
+                <span>5s CUỐI: Đang phát <strong id="bannerSongName">Sóng Gió</strong> (<span id="bannerTimestamp">03:45</span>)</span>
+            </div>
+
+            <div class="timer-display-box" id="timerDisplayBox" title="Nhấp để tùy chỉnh thời gian đếm ngược (Phím T)">
+                <div class="time-unit">
+                    <div class="time-digits" id="minDigits">05</div>
+                    <div class="time-sublabel">Phút</div>
+                </div>
+
+                <div class="time-divider">:</div>
+
+                <div class="time-unit">
+                    <div class="time-digits" id="secDigits">00</div>
+                    <div class="time-sublabel">Giây</div>
+                </div>
+            </div>
+
+            <div class="notion-progress-container">
+                <div class="progress-labels">
+                    <span id="elapsedText">Đã trôi qua: 00:00</span>
+                    <span id="percentText">100% thời gian</span>
+                </div>
+                <div class="notion-progress-track">
+                    <div class="notion-progress-fill" id="progressFill" style="width: 100%;"></div>
+                </div>
+            </div>
+
+            <div class="controls-group">
+                <div class="preset-pills" id="presetPillsContainer">
+                    <button class="preset-btn" data-time="60"><i class='bx bx-time'></i> 1 Phút</button>
+                    <button class="preset-btn" data-time="120"><i class='bx bx-time'></i> 2 Phút</button>
+                    <button class="preset-btn" data-time="180"><i class='bx bx-time'></i> 3 Phút</button>
+                    <button class="preset-btn active" data-time="300"><i class='bx bx-time'></i> 5 Phút (Chuẩn)</button>
+                    <button class="preset-btn" data-time="420"><i class='bx bx-time'></i> 7 Phút</button>
+                    <button class="preset-btn" data-time="600"><i class='bx bx-time'></i> 10 Phút</button>
+                    <button class="preset-btn custom-trigger-btn" id="openCustomTimePresetBtn" title="Tự đặt số phút và giây tùy ý">
+                        <i class='bx bx-slider-alt'></i> <span id="customPresetBtnLabel">Tùy Chỉnh...</span>
+                    </button>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="notion-btn notion-btn-primary" id="btnPlayPause">
+                        <i class='bx bx-play' id="playPauseIcon"></i>
+                        <span id="playPauseText">Bắt Đầu</span>
+                    </button>
+                    <button class="notion-btn" id="btnReset">
+                        <i class='bx bx-reset'></i>
+                        <span>Đặt Lại</span>
+                    </button>
+                    <button class="notion-btn" id="btnNextStationAction">
+                        <i class='bx bx-skip-next'></i>
+                        <span>Qua Trạm Tiếp Theo</span>
+                    </button>
+                </div>
+
+                <div class="notion-keyboard-hints">
+                    <span><kbd class="notion-kbd">Space</kbd> Chạy/Dừng</span>
+                    <span><kbd class="notion-kbd">R</kbd> Đặt lại</span>
+                    <span><kbd class="notion-kbd">N</kbd> Qua trạm</span>
+                    <span><kbd class="notion-kbd">P</kbd> Lùi trạm</span>
+                    <span><kbd class="notion-kbd">T</kbd> Đổi giờ</span>
+                    <span><kbd class="notion-kbd">F</kbd> Toàn màn hình</span>
+                    <span><kbd class="notion-kbd">M</kbd> Bật/Tắt âm</span>
+                    <span><kbd class="notion-kbd">Esc</kbd> Đóng bảng</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="notion-footer">
+        <i class='bx bx-check-shield'></i>
+        <span>Đồng hồ kiểm tra chạy trạm • Nhạc 5s hot mạng xã hội (Lạnh Từ Trong Tim, Sandwich &amp; Story, MRT, Cắt Đôi Nỗi Sầu...)</span>
+    </footer>
+
+    <!-- ===== 4. MODAL ĐIỀU CHỈNH TRỰC TIẾP ĐOẠN PHÁT NGUYÊN BÀI HÁT ===== -->
+    <div class="j97-modal-overlay" id="j97Modal">
+        <div class="j97-modal-card">
+            <div class="modal-header-row">
+                <div class="modal-title">
+                    <i class='bx bx-slider-alt'></i>
+                    <span>Tùy Chỉnh Đoạn Phát 5s (Nhạc Hot MXH &amp; J97)</span>
+                </div>
+                <button class="notion-icon-btn" id="closeJ97ModalBtn"><i class='bx bx-x' style="font-size:1.5rem;"></i></button>
+            </div>
+
+            <!-- Nhóm bài hát hot MXH gần đây -->
+            <div class="song-category-bar">
+                <i class='bx bxs-hot' style="color:#dc2626;"></i> Mới &amp; Hot Mạng Xã Hội
+            </div>
+            <div class="j97-song-tabs">
+                <button class="j97-tab-btn" data-song="lanh_tu_trong_tim"><i class='bx bx-music'></i> Lạnh Từ Trong Tim</button>
+                <button class="j97-tab-btn" data-song="sandwich_story"><i class='bx bx-music'></i> Sandwich &amp; Story</button>
+                <button class="j97-tab-btn" data-song="mrt"><i class='bx bx-music'></i> MRT</button>
+                <button class="j97-tab-btn" data-song="cat_doi_noi_sau"><i class='bx bx-music'></i> Cắt Đôi Nỗi Sầu</button>
+                <button class="j97-tab-btn" data-song="tung_la"><i class='bx bx-music'></i> Từng Là</button>
+                <button class="j97-tab-btn" data-song="khoa_ly_biet"><i class='bx bx-music'></i> Khóa Ly Biệt</button>
+            </div>
+
+            <!-- Nhóm bộ sưu tập J97 -->
+            <div class="song-category-bar">
+                <i class='bx bx-disc'></i> J97 Collection
+            </div>
+            <div class="j97-song-tabs">
+                <button class="j97-tab-btn" data-song="song_gio"><i class='bx bx-music'></i> Sóng Gió</button>
+                <button class="j97-tab-btn" data-song="bac_phan"><i class='bx bx-music'></i> Bạc Phận</button>
+                <button class="j97-tab-btn" data-song="hong_nhan"><i class='bx bx-music'></i> Hồng Nhan</button>
+                <button class="j97-tab-btn" data-song="nguoi_dung"><i class='bx bx-music'></i> Người Dưng</button>
+                <button class="j97-tab-btn" data-song="luu_nien"><i class='bx bx-music'></i> Lưu Niên</button>
+            </div>
+
+            <!-- Khung tương tác tinh chỉnh mốc thời gian -->
+            <div class="trimmer-box">
+                <div class="trimmer-header">
+                    <div class="current-song-headline">
+                        <i class='bx bx-disc'></i>
+                        <span id="trimmerSongTitle">Sóng Gió</span>
+                        <span class="notion-badge badge-purple" id="trimmerBadge">Outro bi tráng</span>
+                    </div>
+                    <span style="font-size:0.8rem; color:var(--text-secondary);">Thời lượng bài: <strong id="trimmerTotalDuration">05:50</strong></span>
+                </div>
+
+                <!-- Thanh trượt tua thời gian trực tiếp -->
+                <div class="slider-wrapper">
+                    <div class="slider-track-container">
+                        <input type="range" class="audio-timeline-slider" id="timelineSlider" min="0" max="350" value="225" step="1">
+                    </div>
+                    <div class="slider-time-labels">
+                        <span>00:00</span>
+                        <span id="sliderCurPosText" style="color:var(--text-primary); font-weight:700;">Đang chọn: 03:45</span>
+                        <span id="sliderMaxText">05:50</span>
+                    </div>
+                </div>
+
+                <!-- Khung hiển thị chi tiết thời gian bắt đầu và kết thúc -->
+                <div class="segment-display-row">
+                    <div class="segment-time-badge">
+                        <span>Bắt đầu phát từ:</span>
+                        <span class="time-chip" id="chipStartTime">03:45</span>
+                        <span style="color:var(--text-muted); font-size:0.8rem;">(đến <span id="chipEndTime">03:50</span>)</span>
+                    </div>
+                    <div class="stepper-btn-group">
+                        <button class="nudge-btn" data-nudge="-5">-5s</button>
+                        <button class="nudge-btn" data-nudge="-1">-1s</button>
+                        <button class="nudge-btn" data-nudge="1">+1s</button>
+                        <button class="nudge-btn" data-nudge="5">+5s</button>
+                    </div>
+                </div>
+
+                <!-- Các mốc kinh điển nổi tiếng nhất của bài -->
+                <div class="clip-preset-group">
+                    <div class="clip-preset-title">Mốc nổi tiếng gợi ý sẵn:</div>
+                    <div class="clip-preset-pills" id="clipPresetsContainer">
+                        <!-- Sẽ tự động render theo từng bài -->
+                    </div>
+                </div>
+
+                <!-- Nút nghe thử đoạn 5s đã chọn -->
+                <div class="preview-action-row">
+                    <button class="btn-test-segment" id="btnTestSegment">
+                        <i class='bx bx-play' id="testSegmentIcon"></i>
+                        <span id="testSegmentText">Nghe Thử 5s Từ Đoạn Này</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tùy chọn nạp file MP3 riêng ngoài nếu muốn -->
+            <div class="mp3-custom-section">
+                <div style="font-weight:600; color:var(--text-primary);"><i class='bx bx-folder'></i> File nhạc dự phòng từ máy:</div>
+                <div class="mp3-custom-row">
+                    <input type="file" id="localMp3Input" accept="audio/*" style="display:none;">
+                    <button class="notion-btn" id="uploadMp3Btn" style="padding:5px 12px; font-size:0.8rem;">
+                        <i class='bx bx-upload'></i> Chọn file MP3 khác
+                    </button>
+                    <span id="uploadedFileName" style="color:var(--text-muted); font-size:0.78rem;">Đang dùng file nguyên bài gốc trong thư mục audio/</span>
+                </div>
+            </div>
+
+            <button class="notion-btn notion-btn-primary" id="saveJ97ChoiceBtn" style="width:100%; padding:12px;">
+                <i class='bx bx-check'></i> Xác Nhận Đoạn Nhạc &amp; Đóng
+            </button>
+        </div>
+    </div>
+
+    <!-- ===== MODAL TÙY CHỈNH THỜI GIAN ĐẾM NGƯỢC ===== -->
+    <div class="custom-time-modal-overlay" id="customTimeModal">
+        <div class="custom-time-modal-card">
+            <div class="modal-header-row">
+                <div class="modal-title">
+                    <i class='bx bx-time-five'></i>
+                    <span>Tùy Chỉnh Thời Gian Đếm Ngược</span>
+                </div>
+                <button class="notion-icon-btn" id="closeCustomTimeModalBtn" title="Đóng (Esc)"><i class='bx bx-x' style="font-size:1.5rem;"></i></button>
+            </div>
+
+            <!-- Khung chỉnh số Phút và Giây trực quan -->
+            <div class="time-editor-card">
+                <div class="time-editor-inputs">
+                    <!-- Ô nhập phút -->
+                    <div class="time-input-group">
+                        <label for="customMinutesInput" class="time-input-label">PHÚT</label>
+                        <div class="time-input-stepper">
+                            <button type="button" class="stepper-arrow-btn" id="btnMinUp" title="Tăng 1 phút"><i class='bx bx-chevron-up'></i></button>
+                            <input type="number" id="customMinutesInput" class="custom-num-input" min="0" max="180" value="5" step="1">
+                            <button type="button" class="stepper-arrow-btn" id="btnMinDown" title="Giảm 1 phút"><i class='bx bx-chevron-down'></i></button>
+                        </div>
+                    </div>
+
+                    <div class="time-inputs-colon">:</div>
+
+                    <!-- Ô nhập giây -->
+                    <div class="time-input-group">
+                        <label for="customSecondsInput" class="time-input-label">GIÂY</label>
+                        <div class="time-input-stepper">
+                            <button type="button" class="stepper-arrow-btn" id="btnSecUp" title="Tăng 5 giây"><i class='bx bx-chevron-up'></i></button>
+                            <input type="number" id="customSecondsInput" class="custom-num-input" min="0" max="59" value="0" step="1">
+                            <button type="button" class="stepper-arrow-btn" id="btnSecDown" title="Giảm 5 giây"><i class='bx bx-chevron-down'></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phím tăng giảm nhanh -->
+                <div class="quick-adjust-chips">
+                    <button type="button" class="nudge-chip" data-adjust="-300">-5p</button>
+                    <button type="button" class="nudge-chip" data-adjust="-60">-1p</button>
+                    <button type="button" class="nudge-chip" data-adjust="-30">-30s</button>
+                    <button type="button" class="nudge-chip" data-adjust="-5">-5s</button>
+                    <span style="color:var(--border-color); padding:0 2px;">•</span>
+                    <button type="button" class="nudge-chip" data-adjust="5">+5s</button>
+                    <button type="button" class="nudge-chip" data-adjust="30">+30s</button>
+                    <button type="button" class="nudge-chip" data-adjust="60">+1p</button>
+                    <button type="button" class="nudge-chip" data-adjust="300">+5p</button>
+                </div>
+
+                <!-- Thanh trượt tổng thời lượng (0s - 60 phút / 3600s) -->
+                <div class="time-slider-section">
+                    <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.82rem; color:var(--text-secondary);">
+                        <span><i class='bx bx-slider'></i> Kéo thanh trượt:</span>
+                        <span id="sliderDurationPreview" style="font-weight:700; color:var(--text-primary); font-family:'JetBrains Mono', monospace;">05:00 (300 giây)</span>
+                    </div>
+                    <input type="range" class="audio-timeline-slider" id="customDurationSlider" min="5" max="3600" step="5" value="300">
+                    <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--text-muted); font-family:'JetBrains Mono', monospace;">
+                        <span>00:05</span>
+                        <span>10:00</span>
+                        <span>30:00</span>
+                        <span>60:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Các mốc thời gian gợi ý chọn nhanh -->
+            <div class="clip-preset-group">
+                <div class="clip-preset-title"><i class='bx bx-bookmark'></i> Các mốc thời gian phổ biến:</div>
+                <div class="custom-presets-grid" id="customPresetsGrid">
+                    <button type="button" class="preset-pill-btn" data-time="30"><i class='bx bx-timer'></i> 30 Giây</button>
+                    <button type="button" class="preset-pill-btn" data-time="60"><i class='bx bx-timer'></i> 1 Phút</button>
+                    <button type="button" class="preset-pill-btn" data-time="120"><i class='bx bx-timer'></i> 2 Phút</button>
+                    <button type="button" class="preset-pill-btn" data-time="180"><i class='bx bx-timer'></i> 3 Phút</button>
+                    <button type="button" class="preset-pill-btn" data-time="240"><i class='bx bx-timer'></i> 4 Phút</button>
+                    <button type="button" class="preset-pill-btn active" data-time="300"><i class='bx bx-timer'></i> 5 Phút (Chuẩn)</button>
+                    <button type="button" class="preset-pill-btn" data-time="420"><i class='bx bx-timer'></i> 7 Phút</button>
+                    <button type="button" class="preset-pill-btn" data-time="600"><i class='bx bx-timer'></i> 10 Phút</button>
+                    <button type="button" class="preset-pill-btn" data-time="900"><i class='bx bx-timer'></i> 15 Phút</button>
+                    <button type="button" class="preset-pill-btn" data-time="1200"><i class='bx bx-timer'></i> 20 Phút</button>
+                    <button type="button" class="preset-pill-btn" data-time="1800"><i class='bx bx-timer'></i> 30 Phút</button>
+                    <button type="button" class="preset-pill-btn" data-time="2700"><i class='bx bx-timer'></i> 45 Phút</button>
+                    <button type="button" class="preset-pill-btn" data-time="3600"><i class='bx bx-timer'></i> 60 Phút</button>
+                </div>
+            </div>
+
+            <!-- Khung thông báo ghi nhớ cấu hình -->
+            <div class="custom-time-info-note">
+                <i class='bx bx-info-circle' style="font-size:1.1rem; color:var(--text-secondary); flex-shrink:0;"></i>
+                <span>Thời gian bạn chọn sẽ được tự động ghi nhớ và áp dụng liên tục cho các trạm tiếp theo.</span>
+            </div>
+
+            <!-- Nhóm nút hành động ở chân modal -->
+            <div class="custom-time-footer-actions">
+                <button type="button" class="notion-btn" id="btnResetDefaultDuration" title="Khôi phục mốc chuẩn 5 phút">
+                    <i class='bx bx-rotate-left'></i> Về Chuẩn (5p)
+                </button>
+                <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;">
+                    <button type="button" class="notion-btn" id="btnCancelCustomTime">
+                        Hủy
+                    </button>
+                    <button type="button" class="notion-btn notion-btn-primary" id="btnApplyCustomTime">
+                        <i class='bx bx-check'></i> Áp Dụng
+                    </button>
+                    <button type="button" class="notion-btn btn-apply-start" id="btnApplyAndStartCustomTime">
+                        <i class='bx bx-play'></i> Áp Dụng &amp; Bắt Đầu
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 5. CALLOUT MODAL HẾT GIỜ ===== -->
+    <div class="timesup-overlay" id="timesUpOverlay">
+        <div class="timesup-card">
+            <div style="width:64px; height:64px; border-radius:12px; background:var(--tag-red-bg); display:flex; align-items:center; justify-content:center;">
+                <i class='bx bx-bell' style="font-size:2.2rem; color:var(--tag-red-text);"></i>
+            </div>
+            <div style="font-size:1.8rem; font-weight:700;" id="modalStationTitle">HẾT GIỜ TRẠM 1!</div>
+            <div style="color:var(--text-secondary); font-size:0.95rem; line-height:1.5;">
+                Thời gian làm bài cho trạm hiện tại đã kết thúc. Vui lòng dừng bút và di chuyển trật tự sang trạm tiếp theo.
+            </div>
+            <div style="display:flex; gap:12px; margin-top:8px; width:100%;">
+                <button class="notion-btn notion-btn-primary" id="modalNextBtn" style="flex:1;">
+                    <i class='bx bx-skip-next'></i> Bắt Đầu Trạm Kế Tiếp
+                </button>
+                <button class="notion-btn" id="modalCloseBtn">
+                    <i class='bx bx-x'></i> Đóng
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Player ngầm để kiểm soát đoạn phát chính xác -->
+    <audio id="globalJ97AudioPlayer" preload="auto"></audio>
+
+    <!-- ===== JAVASCRIPT ĐIỀU KHIỂN & TINH CHỈNH ÂM THANH ===== -->
+    <script>
+        // CẤU HÌNH CÁC BÀI HÁT HOT MẠNG XÃ HỘI & J97 (NGUYÊN BÀI ĐẦY ĐỦ)
+        const J97_SONGS = {
+            lanh_tu_trong_tim: {
+                id: 'lanh_tu_trong_tim',
+                title: 'Lạnh Từ Trong Tim',
+                artist: 'Quang Vinh x Mr. Siro',
+                fileName: 'lanh_tu_trong_tim.mp3',
+                totalDuration: 335, // 05:35
+                defaultStart: 75,   // 01:15 "Biết rằng rời xa là lối Thiên Đường Nắng Hoa..."
+                currentStart: 75,
+                presets: [
+                    { label: 'Điệp khúc cao trào 1', time: 75 },
+                    { label: 'Điệp khúc cao trào 2', time: 170 },
+                    { label: 'Outro da diết', time: 260 },
+                    { label: 'Mở đầu sâu lắng', time: 15 }
+                ]
+            },
+            sandwich_story: {
+                id: 'sandwich_story',
+                title: 'Sandwich & Story',
+                artist: 'MONO ft. EmceeDan',
+                fileName: 'sandwich_and_story.mp3',
+                totalDuration: 239, // 03:59
+                defaultStart: 50,   // 00:50 Điệp khúc viral
+                currentStart: 50,
+                presets: [
+                    { label: 'Điệp khúc viral', time: 50 },
+                    { label: 'Drop nhịp điệu', time: 95 },
+                    { label: 'Cao trào cuối bài', time: 175 },
+                    { label: 'Intro êm dịu', time: 10 }
+                ]
+            },
+            mrt: {
+                id: 'mrt',
+                title: 'MRT',
+                artist: 'buitruonglinh x Xuân Định',
+                fileName: 'mrt.mp3',
+                totalDuration: 371, // 06:11
+                defaultStart: 95,   // 01:35 Tiếng violin & điệp khúc da diết
+                currentStart: 95,
+                presets: [
+                    { label: 'Violin & Điệp khúc', time: 95 },
+                    { label: 'Đoạn Rap bùng nổ', time: 165 },
+                    { label: 'Cao trào chuyển trạm', time: 235 },
+                    { label: 'Outro chuyến tàu', time: 310 }
+                ]
+            },
+            cat_doi_noi_sau: {
+                id: 'cat_doi_noi_sau',
+                title: 'Cắt Đôi Nỗi Sầu',
+                artist: 'Tăng Duy Tân',
+                fileName: 'cat_doi_noi_sau.mp3',
+                totalDuration: 203, // 03:23
+                defaultStart: 45,   // 00:45 Điệp khúc bốc lửa
+                currentStart: 45,
+                presets: [
+                    { label: 'Điệp khúc bốc lửa', time: 45 },
+                    { label: 'Drop Bassline viral', time: 75 },
+                    { label: 'Điệp khúc 2', time: 125 },
+                    { label: 'Mở màn ma mị', time: 12 }
+                ]
+            },
+            tung_la: {
+                id: 'tung_la',
+                title: 'Từng Là',
+                artist: 'Vũ Cát Tường',
+                fileName: 'tung_la.mp3',
+                totalDuration: 276, // 04:36
+                defaultStart: 65,   // 01:05 "Từng là duy nhất..."
+                currentStart: 65,
+                presets: [
+                    { label: 'Điệp khúc da diết', time: 65 },
+                    { label: 'Cao trào bùng nổ', time: 160 },
+                    { label: 'Outro lắng đọng', time: 220 },
+                    { label: 'Dạo đầu acoustic', time: 15 }
+                ]
+            },
+            khoa_ly_biet: {
+                id: 'khoa_ly_biet',
+                title: 'Khóa Ly Biệt',
+                artist: 'Anh Tú (Voi Bản Đôn)',
+                fileName: 'khoa_ly_biet.mp3',
+                totalDuration: 326, // 05:26
+                defaultStart: 80,   // 01:20 "Khóa ly biệt người ơi..."
+                currentStart: 80,
+                presets: [
+                    { label: 'Điệp khúc dâng trào', time: 80 },
+                    { label: 'Cao trào xé lòng', time: 185 },
+                    { label: 'Đoạn chuyển điệp khúc', time: 245 },
+                    { label: 'Intro piano', time: 15 }
+                ]
+            },
+            song_gio: {
+                id: 'song_gio',
+                title: 'Sóng Gió',
+                artist: 'Jack J97',
+                fileName: 'song_gio.mp3',
+                totalDuration: 350, // 05:50
+                defaultStart: 225,  // 03:45 Outro bi tráng
+                currentStart: 225,
+                presets: [
+                    { label: 'Outro bi tráng', time: 225 },
+                    { label: 'Điệp khúc cao trào', time: 75 },
+                    { label: 'Tiếng sáo mở đầu', time: 15 },
+                    { label: 'Đoạn Rap dồn dập', time: 135 }
+                ]
+            },
+            bac_phan: {
+                id: 'bac_phan',
+                title: 'Bạc Phận',
+                artist: 'Jack J97',
+                fileName: 'bac_phan.mp3',
+                totalDuration: 258, // 04:18
+                defaultStart: 68,   // 01:08 "Hồng trần trên đôi mi cay..." & Drop
+                currentStart: 68,
+                presets: [
+                    { label: 'Điệp khúc & Drop beat', time: 68 },
+                    { label: 'Đoạn Rap cao trào', time: 130 },
+                    { label: 'Đoạn mở màn', time: 10 },
+                    { label: 'Điệp khúc cuối', time: 195 }
+                ]
+            },
+            hong_nhan: {
+                id: 'hong_nhan',
+                title: 'Hồng Nhan',
+                artist: 'Jack J97',
+                fileName: 'hong_nhan.mp3',
+                totalDuration: 236, // 03:56
+                defaultStart: 50,   // 00:50 "Và dòng thư tay..."
+                currentStart: 50,
+                presets: [
+                    { label: 'Điệp khúc nổi tiếng', time: 50 },
+                    { label: 'Đoạn Rap', time: 95 },
+                    { label: 'Cao trào cuối bài', time: 175 },
+                    { label: 'Đoạn mở đầu', time: 12 }
+                ]
+            },
+            nguoi_dung: {
+                id: 'nguoi_dung',
+                title: 'Người Dưng',
+                artist: 'Jack J97',
+                fileName: 'nguoi_dung.mp3',
+                totalDuration: 250, // 04:10
+                defaultStart: 210,  // 03:30 Outro sâu lắng
+                currentStart: 210,
+                presets: [
+                    { label: 'Outro sâu lắng', time: 210 },
+                    { label: 'Điệp khúc da diết', time: 70 },
+                    { label: 'Đoạn dạo đầu', time: 15 },
+                    { label: 'Cao trào điệp khúc', time: 155 }
+                ]
+            },
+            luu_nien: {
+                id: 'luu_nien',
+                title: 'Lưu Niên',
+                artist: 'Jack J97',
+                fileName: 'luu_nien.mp3',
+                totalDuration: 216, // 03:36
+                defaultStart: 70,   // 01:10 Điệp khúc cổ phong
+                currentStart: 70,
+                presets: [
+                    { label: 'Điệp khúc cổ phong', time: 70 },
+                    { label: 'Dạo đầu Á Đông', time: 15 },
+                    { label: 'Điệp khúc cuối bài', time: 145 }
+                ]
+            }
+        };
+
+        // Khôi phục mốc đã lưu từ localStorage nếu có
+        try {
+            const savedStarts = JSON.parse(localStorage.getItem('j97_custom_starts'));
+            if (savedStarts) {
+                Object.keys(savedStarts).forEach(id => {
+                    if (J97_SONGS[id]) {
+                        J97_SONGS[id].currentStart = savedStarts[id];
+                    }
+                });
+            }
+            const savedSelected = localStorage.getItem('j97_selected_song');
+            if (savedSelected && J97_SONGS[savedSelected]) {
+                state_selected_song = savedSelected;
+            }
+        } catch(e) {}
+
+        let state_selected_song = localStorage.getItem('j97_selected_song') || 'lanh_tu_trong_tim';
+
+        // Khôi phục thời gian tùy chỉnh đã lưu nếu có (mặc định 300s = 5 phút)
+        let savedCustomSeconds = parseInt(localStorage.getItem('timer_custom_seconds'), 10);
+        if (isNaN(savedCustomSeconds) || savedCustomSeconds < 5) {
+            savedCustomSeconds = 300;
+        }
+
+        // STATE CHUNG
+        const state = {
+            totalSeconds: savedCustomSeconds,
+            remainingSeconds: savedCustomSeconds,
+            stationNumber: 1,
+            isRunning: false,
+            soundEnabled: true,
+            timerInterval: null,
+            selectedJ97: state_selected_song,
+            activeTabSong: state_selected_song,
+            hasCustomMp3: false,
+            customMp3Url: null,
+            isPreviewPlaying: false,
+            previewTimeout: null,
+            isPlaying5sAudio: false
+        };
+
+        // DOM ELEMENTS
+        const minDigits = document.getElementById('minDigits');
+        const secDigits = document.getElementById('secDigits');
+        const progressFill = document.getElementById('progressFill');
+        const elapsedText = document.getElementById('elapsedText');
+        const percentText = document.getElementById('percentText');
+
+        const btnPlayPause = document.getElementById('btnPlayPause');
+        const playPauseIcon = document.getElementById('playPauseIcon');
+        const playPauseText = document.getElementById('playPauseText');
+        const btnReset = document.getElementById('btnReset');
+        const btnNextStationAction = document.getElementById('btnNextStationAction');
+
+        const stationDisplay = document.getElementById('stationDisplay');
+        const prevStationBtn = document.getElementById('prevStationBtn');
+        const nextStationBtn = document.getElementById('nextStationBtn');
+        const statusBadge = document.getElementById('statusBadge');
+        const durationBadge = document.getElementById('durationBadge');
+        const durationBadgeText = document.getElementById('durationBadgeText');
+        const openCustomTimeNavBtn = document.getElementById('openCustomTimeNavBtn');
+        const customTimeNavLabel = document.getElementById('customTimeNavLabel');
+        const openCustomTimePresetBtn = document.getElementById('openCustomTimePresetBtn');
+        const customPresetBtnLabel = document.getElementById('customPresetBtnLabel');
+        const timerDisplayBox = document.getElementById('timerDisplayBox');
+
+        // Custom Time Modal Elements
+        const customTimeModal = document.getElementById('customTimeModal');
+        const closeCustomTimeModalBtn = document.getElementById('closeCustomTimeModalBtn');
+        const customMinutesInput = document.getElementById('customMinutesInput');
+        const customSecondsInput = document.getElementById('customSecondsInput');
+        const btnMinUp = document.getElementById('btnMinUp');
+        const btnMinDown = document.getElementById('btnMinDown');
+        const btnSecUp = document.getElementById('btnSecUp');
+        const btnSecDown = document.getElementById('btnSecDown');
+        const customDurationSlider = document.getElementById('customDurationSlider');
+        const sliderDurationPreview = document.getElementById('sliderDurationPreview');
+        const btnResetDefaultDuration = document.getElementById('btnResetDefaultDuration');
+        const btnCancelCustomTime = document.getElementById('btnCancelCustomTime');
+        const btnApplyCustomTime = document.getElementById('btnApplyCustomTime');
+        const btnApplyAndStartCustomTime = document.getElementById('btnApplyAndStartCustomTime');
+
+        const j97Badge = document.getElementById('j97Badge');
+        const j97BadgeText = document.getElementById('j97BadgeText');
+        const currentJ97NavLabel = document.getElementById('currentJ97NavLabel');
+        const openJ97Btn = document.getElementById('openJ97Btn');
+        const j97Modal = document.getElementById('j97Modal');
+        const closeJ97ModalBtn = document.getElementById('closeJ97ModalBtn');
+        const saveJ97ChoiceBtn = document.getElementById('saveJ97ChoiceBtn');
+
+        const j97ActiveBanner = document.getElementById('j97ActiveBanner');
+        const bannerSongName = document.getElementById('bannerSongName');
+        const bannerTimestamp = document.getElementById('bannerTimestamp');
+
+        // Trimmer Elements
+        const trimmerSongTitle = document.getElementById('trimmerSongTitle');
+        const trimmerBadge = document.getElementById('trimmerBadge');
+        const trimmerTotalDuration = document.getElementById('trimmerTotalDuration');
+        const timelineSlider = document.getElementById('timelineSlider');
+        const sliderCurPosText = document.getElementById('sliderCurPosText');
+        const sliderMaxText = document.getElementById('sliderMaxText');
+        const chipStartTime = document.getElementById('chipStartTime');
+        const chipEndTime = document.getElementById('chipEndTime');
+        const clipPresetsContainer = document.getElementById('clipPresetsContainer');
+        const btnTestSegment = document.getElementById('btnTestSegment');
+        const testSegmentIcon = document.getElementById('testSegmentIcon');
+        const testSegmentText = document.getElementById('testSegmentText');
+
+        const uploadMp3Btn = document.getElementById('uploadMp3Btn');
+        const localMp3Input = document.getElementById('localMp3Input');
+        const uploadedFileName = document.getElementById('uploadedFileName');
+        const globalJ97AudioPlayer = document.getElementById('globalJ97AudioPlayer');
+
+        const timesUpOverlay = document.getElementById('timesUpOverlay');
+        const modalStationTitle = document.getElementById('modalStationTitle');
+        const modalNextBtn = document.getElementById('modalNextBtn');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+        const soundBtn = document.getElementById('soundBtn');
+        const soundIcon = document.getElementById('soundIcon');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+
+        const themeBtn = document.getElementById('themeBtn');
+        const themeDropdown = document.getElementById('themeDropdown');
+        const themeIcon = document.getElementById('themeIcon');
+        const themeLabel = document.getElementById('themeLabel');
+
+        // TIỆN ÍCH CHUYỂN ĐỔI GIÂY SANG ĐỊNH DẠNG MM:SS
+        function formatMMSS(totalSecs) {
+            const m = Math.floor(totalSecs / 60);
+            const s = Math.floor(totalSecs % 60);
+            return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        }
+
+        // ===== HỆ THỐNG ÂM THANH CHUẨN (WEB AUDIO & MP3 PLAYER) =====
+        let audioCtx = null;
+        function getAudioContext() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+            return audioCtx;
+        }
+
+        function playTick() {
+            if (!state.soundEnabled || state.isPlaying5sAudio) return;
+            try {
+                const ctx = getAudioContext();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(800, ctx.currentTime);
+                gain.gain.setValueAtTime(0.02, ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.03);
+                osc.start(ctx.currentTime);
+                osc.stop(ctx.currentTime + 0.03);
+            } catch(e) {}
+        }
+
+        // Chuông hết giờ chuyển trạm
+        function playStationChime() {
+            if (!state.soundEnabled) return;
+            try {
+                const ctx = getAudioContext();
+                [0, 0.25, 0.5].forEach((d, i) => {
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(i === 2 ? 1046.5 : 784, ctx.currentTime + d);
+                    gain.gain.setValueAtTime(0.25, ctx.currentTime + d);
+                    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + d + 0.35);
+                    osc.start(ctx.currentTime + d);
+                    osc.stop(ctx.currentTime + d + 0.35);
+                });
+
+                setTimeout(() => {
+                    if (!state.soundEnabled) return;
+                    const osc2 = ctx.createOscillator();
+                    const gain2 = ctx.createGain();
+                    osc2.connect(gain2);
+                    gain2.connect(ctx.destination);
+                    osc2.type = 'sine';
+                    osc2.frequency.setValueAtTime(523.25, ctx.currentTime);
+                    gain2.gain.setValueAtTime(0.3, ctx.currentTime);
+                    gain2.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 2.2);
+                    osc2.start(ctx.currentTime);
+                    osc2.stop(ctx.currentTime + 2.2);
+                }, 800);
+            } catch(e) {}
+        }
+
+        // HÀM PHÁT ĐOẠN 5S TỪ BÀI HÁT J97 (NGUYÊN BÀI MP3 THẬT TỪ THƯ MỤC AUDIO/)
+        function playJ97Segment(songId, startSec, onComplete) {
+            if (!state.soundEnabled) {
+                if (onComplete) onComplete();
+                return;
+            }
+
+            const song = J97_SONGS[songId] || J97_SONGS.song_gio;
+            const src = (state.hasCustomMp3 && state.customMp3Url) 
+                ? state.customMp3Url 
+                : `audio/${song.fileName}`;
+
+            globalJ97AudioPlayer.pause();
+            globalJ97AudioPlayer.src = src;
+            globalJ97AudioPlayer.currentTime = startSec;
+            globalJ97AudioPlayer.volume = 1.0;
+
+            let finished = false;
+            const finish = () => {
+                if (!finished) {
+                    finished = true;
+                    globalJ97AudioPlayer.pause();
+                    if (onComplete) onComplete();
+                }
+            };
+
+            const p = globalJ97AudioPlayer.play();
+            if (p !== undefined) {
+                p.then(() => {
+                    // Dừng sau đúng 5.2 giây
+                    setTimeout(finish, 5200);
+                }).catch(err => {
+                    console.warn("Lỗi phát audio:", err);
+                    finish();
+                });
+            } else {
+                setTimeout(finish, 5200);
+            }
+        }
+
+        // ===== CẬP NHẬT GIAO DIỆN TRIMMER MODAL =====
+        function updateTrimmerUI(songId) {
+            const song = J97_SONGS[songId];
+            if (!song) return;
+
+            trimmerSongTitle.textContent = song.artist ? `${song.title} (${song.artist})` : song.title;
+            const currentFormatted = formatMMSS(song.currentStart);
+            const totalFormatted = formatMMSS(song.totalDuration);
+
+            trimmerTotalDuration.textContent = totalFormatted;
+            sliderMaxText.textContent = totalFormatted;
+
+            timelineSlider.max = Math.max(10, song.totalDuration - 5);
+            timelineSlider.value = song.currentStart;
+
+            sliderCurPosText.textContent = `Đang chọn: ${currentFormatted}`;
+            chipStartTime.textContent = currentFormatted;
+            chipEndTime.textContent = formatMMSS(song.currentStart + 5);
+
+            // Cập nhật nhãn badge
+            const matchingPreset = song.presets.find(p => p.time === song.currentStart);
+            trimmerBadge.textContent = matchingPreset ? matchingPreset.label : `Mốc ${currentFormatted}`;
+
+            // Render gợi ý các mốc nổi tiếng
+            clipPresetsContainer.innerHTML = '';
+            song.presets.forEach(p => {
+                const btn = document.createElement('button');
+                btn.className = `clip-pill-btn ${p.time === song.currentStart ? 'active' : ''}`;
+                btn.innerHTML = `<i class='bx bx-bookmark'></i> ${p.label} (${formatMMSS(p.time)})`;
+                btn.addEventListener('click', () => {
+                    song.currentStart = p.time;
+                    saveCurrentSongStart(songId, p.time);
+                    updateTrimmerUI(songId);
+                    updateGlobalBadges();
+                });
+                clipPresetsContainer.appendChild(btn);
+            });
+        }
+
+        function saveCurrentSongStart(songId, startSec) {
+            J97_SONGS[songId].currentStart = startSec;
+            try {
+                const savedStarts = JSON.parse(localStorage.getItem('j97_custom_starts')) || {};
+                savedStarts[songId] = startSec;
+                localStorage.setItem('j97_custom_starts', JSON.stringify(savedStarts));
+            } catch(e) {}
+        }
+
+        function updateGlobalBadges() {
+            const song = J97_SONGS[state.selectedJ97] || J97_SONGS.song_gio;
+            const timeStr = formatMMSS(song.currentStart);
+            const labelText = `${song.title} (${timeStr})`;
+
+            j97BadgeText.textContent = labelText;
+            currentJ97NavLabel.textContent = labelText;
+            bannerSongName.textContent = song.title;
+            bannerTimestamp.textContent = timeStr;
+        }
+
+        // SỰ KIỆN KÉO THANH TRƯỢT TIMELINE
+        timelineSlider.addEventListener('input', (e) => {
+            const val = parseInt(e.target.value, 10);
+            const song = J97_SONGS[state.activeTabSong];
+            song.currentStart = val;
+            saveCurrentSongStart(state.activeTabSong, val);
+
+            const curFormatted = formatMMSS(val);
+            sliderCurPosText.textContent = `Đang chọn: ${curFormatted}`;
+            chipStartTime.textContent = curFormatted;
+            chipEndTime.textContent = formatMMSS(val + 5);
+
+            const matchingPreset = song.presets.find(p => p.time === val);
+            trimmerBadge.textContent = matchingPreset ? matchingPreset.label : `Mốc ${curFormatted}`;
+
+            // Cập nhật class active cho preset pills
+            document.querySelectorAll('.clip-pill-btn').forEach((btn, idx) => {
+                if (song.presets[idx] && song.presets[idx].time === val) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            if (state.activeTabSong === state.selectedJ97) {
+                updateGlobalBadges();
+            }
+        });
+
+        // NÚT TĂNG GIẢM TINH CHỈNH GIÂY (-5s, -1s, +1s, +5s)
+        document.querySelectorAll('.nudge-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const nudge = parseInt(btn.getAttribute('data-nudge'), 10);
+                const song = J97_SONGS[state.activeTabSong];
+                let newVal = Math.max(0, Math.min(song.totalDuration - 5, song.currentStart + nudge));
+                song.currentStart = newVal;
+                saveCurrentSongStart(state.activeTabSong, newVal);
+                updateTrimmerUI(state.activeTabSong);
+                if (state.activeTabSong === state.selectedJ97) {
+                    updateGlobalBadges();
+                }
+            });
+        });
+
+        // SỰ KIỆN CHUYỂN TAB BÀI HÁT
+        document.querySelectorAll('.j97-tab-btn').forEach(tabBtn => {
+            tabBtn.addEventListener('click', () => {
+                document.querySelectorAll('.j97-tab-btn').forEach(b => b.classList.remove('active'));
+                tabBtn.classList.add('active');
+
+                const songId = tabBtn.getAttribute('data-song');
+                state.activeTabSong = songId;
+                state.selectedJ97 = songId;
+                localStorage.setItem('j97_selected_song', songId);
+
+                // Dừng nghe thử nếu đang phát
+                if (state.isPreviewPlaying) {
+                    stopSegmentPreview();
+                }
+
+                updateTrimmerUI(songId);
+                updateGlobalBadges();
+            });
+        });
+
+        // NÚT NGHE THỬ 5S TỪ ĐOẠN ĐANG CHỌN
+        function stopSegmentPreview() {
+            state.isPreviewPlaying = false;
+            globalJ97AudioPlayer.pause();
+            clearTimeout(state.previewTimeout);
+            btnTestSegment.classList.remove('playing');
+            testSegmentIcon.className = 'bx bx-play';
+            testSegmentText.textContent = 'Nghe Thử 5s Từ Đoạn Này';
+        }
+
+        btnTestSegment.addEventListener('click', () => {
+            if (state.isPreviewPlaying) {
+                stopSegmentPreview();
+                return;
+            }
+
+            state.isPreviewPlaying = true;
+            btnTestSegment.classList.add('playing');
+            testSegmentIcon.className = 'bx bx-pause';
+
+            const song = J97_SONGS[state.activeTabSong];
+            let remainingCount = 5;
+            testSegmentText.textContent = `Đang phát (${remainingCount}s)... Nhấn để dừng`;
+
+            const interval = setInterval(() => {
+                remainingCount--;
+                if (remainingCount > 0 && state.isPreviewPlaying) {
+                    testSegmentText.textContent = `Đang phát (${remainingCount}s)... Nhấn để dừng`;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 1000);
+
+            playJ97Segment(state.activeTabSong, song.currentStart, () => {
+                clearInterval(interval);
+                stopSegmentPreview();
+            });
+        });
+
+        // Mở/Đóng Modal
+        openJ97Btn.addEventListener('click', () => {
+            updateTrimmerUI(state.activeTabSong);
+            j97Modal.classList.add('active');
+        });
+        j97Badge.addEventListener('click', () => {
+            updateTrimmerUI(state.activeTabSong);
+            j97Modal.classList.add('active');
+        });
+        closeJ97ModalBtn.addEventListener('click', () => {
+            stopSegmentPreview();
+            j97Modal.classList.remove('active');
+        });
+        saveJ97ChoiceBtn.addEventListener('click', () => {
+            stopSegmentPreview();
+            updateGlobalBadges();
+            j97Modal.classList.remove('active');
+        });
+
+        // Nạp file MP3 riêng
+        uploadMp3Btn.addEventListener('click', () => localMp3Input.click());
+        localMp3Input.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                state.hasCustomMp3 = true;
+                state.customMp3Url = URL.createObjectURL(file);
+                uploadedFileName.textContent = `Đang dùng: ${file.name}`;
+                uploadedFileName.style.color = '#286438';
+            }
+        });
+
+        // ===== CẬP NHẬT HIỂN THỊ ĐỒNG HỒ ĐẾM NGƯỢC =====
+        function updateDisplay() {
+            const mins = Math.floor(state.remainingSeconds / 60);
+            const secs = state.remainingSeconds % 60;
+
+            const minStr = String(mins).padStart(2, '0');
+            const secStr = String(secs).padStart(2, '0');
+
+            minDigits.textContent = minStr;
+            secDigits.textContent = secStr;
+
+            const progress = (state.remainingSeconds / state.totalSeconds) * 100;
+            progressFill.style.width = `${Math.max(0, Math.min(100, progress))}%`;
+            percentText.textContent = `${Math.round(progress)}% thời gian`;
+
+            const elapsed = state.totalSeconds - state.remainingSeconds;
+            const elM = Math.floor(elapsed / 60);
+            const elS = elapsed % 60;
+            elapsedText.textContent = `Đã trôi qua: ${String(elM).padStart(2, '0')}:${String(elS).padStart(2, '0')}`;
+
+            document.title = `${minStr}:${secStr} • Trạm ${state.stationNumber} - Đồng Hồ Chạy Trạm`;
+
+            document.body.classList.remove('state-warning', 'state-danger');
+            if (state.remainingSeconds <= 15 && state.remainingSeconds > 0) {
+                document.body.classList.add('state-danger');
+            } else if (state.remainingSeconds <= 60 && state.remainingSeconds > 0) {
+                document.body.classList.add('state-warning');
+            }
+        }
+
+        // ===== LOGIC ĐẾM NGƯỢC =====
+        function tick() {
+            if (state.remainingSeconds <= 0) {
+                onTimesUp();
+                return;
+            }
+
+            state.remainingSeconds--;
+            updateDisplay();
+
+            // KHI CÒN ĐÚNG 5 GIÂY (HOẶC ÍT HƠN KHI ĐẶT THỜI GIAN NGẮN): PHÁT ĐOẠN ĐÃ CHỈNH CỦA BÀI HÁT J97
+            if (state.remainingSeconds <= 5 && state.remainingSeconds > 0 && !state.isPlaying5sAudio) {
+                state.isPlaying5sAudio = true;
+                const song = J97_SONGS[state.selectedJ97] || J97_SONGS.song_gio;
+                j97ActiveBanner.classList.add('playing');
+
+                playJ97Segment(state.selectedJ97, song.currentStart, () => {
+                    state.isPlaying5sAudio = false;
+                    j97ActiveBanner.classList.remove('playing');
+                });
+            } else if (state.remainingSeconds > 5) {
+                playTick();
+            }
+
+            if (state.remainingSeconds <= 0) {
+                onTimesUp();
+            }
+        }
+
+        function startTimer() {
+            if (state.isRunning) return;
+            if (state.remainingSeconds <= 0) {
+                resetTimer();
+            }
+            getAudioContext();
+            state.isRunning = true;
+            state.timerInterval = setInterval(tick, 1000);
+
+            btnPlayPause.className = 'notion-btn notion-btn-primary paused';
+            playPauseIcon.className = 'bx bx-pause';
+            playPauseText.textContent = 'Tạm Dừng';
+
+            statusBadge.className = 'notion-badge badge-green';
+            statusBadge.innerHTML = "<i class='bx bx-loader-alt bx-spin'></i> Đang chạy";
+        }
+
+        function pauseTimer() {
+            if (!state.isRunning) return;
+            state.isRunning = false;
+            clearInterval(state.timerInterval);
+
+            btnPlayPause.className = 'notion-btn notion-btn-primary';
+            playPauseIcon.className = 'bx bx-play';
+            playPauseText.textContent = 'Tiếp Tục';
+
+            statusBadge.className = 'notion-badge badge-yellow';
+            statusBadge.innerHTML = "<i class='bx bx-pause'></i> Tạm dừng";
+        }
+
+        function toggleTimer() {
+            state.isRunning ? pauseTimer() : startTimer();
+        }
+
+        function resetTimer() {
+            pauseTimer();
+            state.remainingSeconds = state.totalSeconds;
+            state.isPlaying5sAudio = false;
+            globalJ97AudioPlayer.pause();
+            j97ActiveBanner.classList.remove('playing');
+            updateDisplay();
+
+            btnPlayPause.className = 'notion-btn notion-btn-primary';
+            playPauseIcon.className = 'bx bx-play';
+            playPauseText.textContent = 'Bắt Đầu';
+
+            statusBadge.className = 'notion-badge badge-blue';
+            statusBadge.innerHTML = "<i class='bx bx-circle'></i> Sẵn sàng";
+
+            document.body.classList.remove('state-warning', 'state-danger');
+            timesUpOverlay.classList.remove('active');
+        }
+
+        function onTimesUp() {
+            pauseTimer();
+            state.remainingSeconds = 0;
+            state.isPlaying5sAudio = false;
+            globalJ97AudioPlayer.pause();
+            j97ActiveBanner.classList.remove('playing');
+            updateDisplay();
+
+            statusBadge.className = 'notion-badge badge-red';
+            statusBadge.innerHTML = "<i class='bx bx-bell'></i> Hết giờ!";
+
+            modalStationTitle.textContent = `HẾT GIỜ TRẠM ${state.stationNumber}!`;
+            timesUpOverlay.classList.add('active');
+
+            playStationChime();
+        }
+
+        function setStation(num) {
+            state.stationNumber = Math.max(1, num);
+            stationDisplay.textContent = `Trạm ${state.stationNumber}`;
+        }
+
+        function nextStation() {
+            setStation(state.stationNumber + 1);
+            resetTimer();
+            startTimer();
+        }
+
+        function prevStation() {
+            if (state.stationNumber > 1) {
+                setStation(state.stationNumber - 1);
+                resetTimer();
+            }
+        }
+
+        // ===== CẬP NHẬT NHÃN THỜI LƯỢNG VÀ TRẠNG THÁI NÚT PRESET =====
+        function formatDurationLabel(totalSecs) {
+            const m = Math.floor(totalSecs / 60);
+            const s = totalSecs % 60;
+            if (m > 0 && s > 0) {
+                return `${m}p ${s}s / trạm`;
+            } else if (m > 0) {
+                return `${m} phút / trạm`;
+            } else {
+                return `${s} giây / trạm`;
+            }
+        }
+
+        function updateDurationBadges() {
+            const label = formatDurationLabel(state.totalSeconds);
+            if (durationBadgeText) {
+                durationBadgeText.textContent = label;
+            } else if (durationBadge) {
+                durationBadge.textContent = label;
+            }
+
+            if (customTimeNavLabel) {
+                customTimeNavLabel.textContent = formatMMSS(state.totalSeconds);
+            }
+
+            // Đồng bộ trạng thái active cho các nút Preset trên màn hình chính
+            let matchedStandard = false;
+            document.querySelectorAll('.preset-pills .preset-btn:not(.custom-trigger-btn)').forEach(btn => {
+                const btnSecs = parseInt(btn.getAttribute('data-time'), 10);
+                if (btnSecs === state.totalSeconds) {
+                    btn.classList.add('active');
+                    matchedStandard = true;
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            if (openCustomTimePresetBtn) {
+                if (!matchedStandard) {
+                    openCustomTimePresetBtn.classList.add('active');
+                    customPresetBtnLabel.textContent = `${formatMMSS(state.totalSeconds)} (Tùy Chỉnh)`;
+                } else {
+                    openCustomTimePresetBtn.classList.remove('active');
+                    customPresetBtnLabel.textContent = 'Tùy Chỉnh...';
+                }
+            }
+        }
+
+        // ===== QUẢN LÝ MODAL TÙY CHỈNH THỜI GIAN =====
+        function syncCustomModalFromSeconds(secs) {
+            secs = Math.max(5, Math.min(7200, secs));
+            const m = Math.floor(secs / 60);
+            const s = secs % 60;
+            customMinutesInput.value = m;
+            customSecondsInput.value = s;
+            customDurationSlider.value = Math.min(3600, secs);
+            sliderDurationPreview.textContent = `${formatMMSS(secs)} (${secs} giây)`;
+
+            // Đồng bộ class active trong bảng preset của modal
+            document.querySelectorAll('.custom-presets-grid .preset-pill-btn').forEach(btn => {
+                const btnTime = parseInt(btn.getAttribute('data-time'), 10);
+                if (btnTime === secs) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        function getCustomModalCurrentSeconds() {
+            let m = parseInt(customMinutesInput.value, 10);
+            let s = parseInt(customSecondsInput.value, 10);
+            if (isNaN(m) || m < 0) m = 0;
+            if (isNaN(s) || s < 0) s = 0;
+            let total = (m * 60) + s;
+            return Math.max(5, Math.min(7200, total));
+        }
+
+        function openCustomTimeModal() {
+            syncCustomModalFromSeconds(state.totalSeconds);
+            customTimeModal.classList.add('active');
+            customMinutesInput.focus();
+            customMinutesInput.select();
+        }
+
+        function closeCustomTimeModal() {
+            customTimeModal.classList.remove('active');
+        }
+
+        function applyCustomDuration(totalSecs, shouldStartImmediately = false) {
+            totalSecs = Math.max(5, Math.min(7200, totalSecs));
+            state.totalSeconds = totalSecs;
+            try {
+                localStorage.setItem('timer_custom_seconds', totalSecs);
+            } catch(e) {}
+
+            resetTimer();
+            updateDurationBadges();
+            updateDisplay();
+            closeCustomTimeModal();
+
+            if (shouldStartImmediately) {
+                startTimer();
+            }
+        }
+
+        // SỰ KIỆN NÚT MỞ BẢNG TÙY CHỈNH THỜI GIAN
+        if (openCustomTimeNavBtn) openCustomTimeNavBtn.addEventListener('click', openCustomTimeModal);
+        if (durationBadge) durationBadge.addEventListener('click', openCustomTimeModal);
+        if (openCustomTimePresetBtn) openCustomTimePresetBtn.addEventListener('click', openCustomTimeModal);
+        if (timerDisplayBox) {
+            timerDisplayBox.addEventListener('click', (e) => {
+                // Nhấp vào vùng giờ sẽ mở bảng đổi giờ nếu chưa chạy hoặc đang tạm dừng
+                openCustomTimeModal();
+            });
+        }
+
+        // SỰ KIỆN TRONG MODAL TÙY CHỈNH THỜI GIAN
+        closeCustomTimeModalBtn.addEventListener('click', closeCustomTimeModal);
+        btnCancelCustomTime.addEventListener('click', closeCustomTimeModal);
+
+        // Nút tăng/giảm Stepper Phút & Giây
+        btnMinUp.addEventListener('click', () => {
+            let cur = getCustomModalCurrentSeconds() + 60;
+            syncCustomModalFromSeconds(cur);
+        });
+        btnMinDown.addEventListener('click', () => {
+            let cur = Math.max(5, getCustomModalCurrentSeconds() - 60);
+            syncCustomModalFromSeconds(cur);
+        });
+        btnSecUp.addEventListener('click', () => {
+            let cur = getCustomModalCurrentSeconds() + 5;
+            syncCustomModalFromSeconds(cur);
+        });
+        btnSecDown.addEventListener('click', () => {
+            let cur = Math.max(5, getCustomModalCurrentSeconds() - 5);
+            syncCustomModalFromSeconds(cur);
+        });
+
+        // Nhập trực tiếp ô input
+        customMinutesInput.addEventListener('input', () => {
+            let m = parseInt(customMinutesInput.value, 10);
+            if (isNaN(m) || m < 0) m = 0;
+            let s = parseInt(customSecondsInput.value, 10);
+            if (isNaN(s) || s < 0) s = 0;
+            let total = (m * 60) + s;
+            customDurationSlider.value = Math.min(3600, total);
+            sliderDurationPreview.textContent = `${formatMMSS(total)} (${total} giây)`;
+        });
+
+        customSecondsInput.addEventListener('input', () => {
+            let m = parseInt(customMinutesInput.value, 10);
+            if (isNaN(m) || m < 0) m = 0;
+            let s = parseInt(customSecondsInput.value, 10);
+            if (isNaN(s) || s < 0) s = 0;
+            let total = (m * 60) + s;
+            customDurationSlider.value = Math.min(3600, total);
+            sliderDurationPreview.textContent = `${formatMMSS(total)} (${total} giây)`;
+        });
+
+        // Tự động định dạng khi blur
+        customMinutesInput.addEventListener('blur', () => {
+            let total = getCustomModalCurrentSeconds();
+            syncCustomModalFromSeconds(total);
+        });
+        customSecondsInput.addEventListener('blur', () => {
+            let total = getCustomModalCurrentSeconds();
+            syncCustomModalFromSeconds(total);
+        });
+
+        // Enter trong ô input thì Áp Dụng luôn
+        customMinutesInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                applyCustomDuration(getCustomModalCurrentSeconds(), false);
+            }
+        });
+        customSecondsInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                applyCustomDuration(getCustomModalCurrentSeconds(), false);
+            }
+        });
+
+        // Các nút Nudge Chip (+/- nhanh)
+        document.querySelectorAll('.quick-adjust-chips .nudge-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                const delta = parseInt(chip.getAttribute('data-adjust'), 10);
+                let cur = Math.max(5, getCustomModalCurrentSeconds() + delta);
+                syncCustomModalFromSeconds(cur);
+            });
+        });
+
+        // Thanh trượt thời gian
+        customDurationSlider.addEventListener('input', (e) => {
+            const val = parseInt(e.target.value, 10);
+            syncCustomModalFromSeconds(val);
+        });
+
+        // Các mốc chọn nhanh trong modal
+        document.querySelectorAll('.custom-presets-grid .preset-pill-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const secs = parseInt(btn.getAttribute('data-time'), 10);
+                syncCustomModalFromSeconds(secs);
+            });
+        });
+
+        // Nút đặt lại về mặc định 5 phút
+        btnResetDefaultDuration.addEventListener('click', () => {
+            syncCustomModalFromSeconds(300);
+        });
+
+        // Nút Áp Dụng
+        btnApplyCustomTime.addEventListener('click', () => {
+            applyCustomDuration(getCustomModalCurrentSeconds(), false);
+        });
+
+        // Nút Áp Dụng & Bắt Đầu Luôn
+        btnApplyAndStartCustomTime.addEventListener('click', () => {
+            applyCustomDuration(getCustomModalCurrentSeconds(), true);
+        });
+
+        // NÚT CHỌN NHANH THỜI GIAN TRÊN MÀN HÌNH CHÍNH
+        document.querySelectorAll('.preset-pills .preset-btn:not(.custom-trigger-btn)').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const secs = parseInt(btn.getAttribute('data-time'), 10);
+                applyCustomDuration(secs, false);
+            });
+        });
+
+        // Nút điều khiển
+        btnPlayPause.addEventListener('click', toggleTimer);
+        btnReset.addEventListener('click', resetTimer);
+        btnNextStationAction.addEventListener('click', nextStation);
+
+        prevStationBtn.addEventListener('click', prevStation);
+        nextStationBtn.addEventListener('click', nextStation);
+
+        modalNextBtn.addEventListener('click', () => {
+            timesUpOverlay.classList.remove('active');
+            nextStation();
+        });
+        modalCloseBtn.addEventListener('click', () => timesUpOverlay.classList.remove('active'));
+
+        soundBtn.addEventListener('click', () => {
+            state.soundEnabled = !state.soundEnabled;
+            soundIcon.className = state.soundEnabled ? 'bx bx-volume-full' : 'bx bx-volume-mute';
+        });
+
+        fullscreenBtn.addEventListener('click', () => {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(() => {});
+            } else {
+                document.exitFullscreen().catch(() => {});
+            }
+        });
+
+        // Theme Dropdown
+        themeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            themeDropdown.classList.toggle('active');
+        });
+        document.addEventListener('click', (e) => {
+            if (!themeDropdown.contains(e.target) && e.target !== themeBtn) {
+                themeDropdown.classList.remove('active');
+            }
+        });
+
+        document.querySelectorAll('.theme-option').forEach(opt => {
+            opt.addEventListener('click', () => {
+                const t = opt.getAttribute('data-theme');
+                document.documentElement.setAttribute('data-theme', t);
+                document.querySelectorAll('.theme-option').forEach(o => o.classList.remove('active'));
+                opt.classList.add('active');
+                themeDropdown.classList.remove('active');
+                if (t === 'light') {
+                    themeIcon.className = 'bx bx-sun';
+                    themeLabel.textContent = 'Sáng';
+                } else if (t === 'dark') {
+                    themeIcon.className = 'bx bx-moon';
+                    themeLabel.textContent = 'Tối';
+                } else {
+                    themeIcon.className = 'bx bx-coffee';
+                    themeLabel.textContent = 'Giấy';
+                }
+            });
+        });
+
+        // PHÍM TẮT
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT') {
+                if (e.key === 'Escape') {
+                    closeCustomTimeModal();
+                    stopSegmentPreview();
+                    j97Modal.classList.remove('active');
+                }
+                return;
+            }
+            switch(e.code) {
+                case 'Space':
+                    e.preventDefault();
+                    toggleTimer();
+                    break;
+                case 'KeyR':
+                    resetTimer();
+                    break;
+                case 'KeyN':
+                    nextStation();
+                    break;
+                case 'KeyP':
+                    prevStation();
+                    break;
+                case 'KeyT':
+                    e.preventDefault();
+                    openCustomTimeModal();
+                    break;
+                case 'KeyF':
+                    fullscreenBtn.click();
+                    break;
+                case 'KeyM':
+                    soundBtn.click();
+                    break;
+                case 'Escape':
+                    closeCustomTimeModal();
+                    stopSegmentPreview();
+                    j97Modal.classList.remove('active');
+                    timesUpOverlay.classList.remove('active');
+                    break;
+            }
+        });
+
+        // KHỞI TẠO BAN ĐẦU
+        // Đặt active tab ban đầu
+        document.querySelectorAll('.j97-tab-btn').forEach(b => {
+            if (b.getAttribute('data-song') === state.selectedJ97) {
+                b.classList.add('active');
+            } else {
+                b.classList.remove('active');
+            }
+        });
+        updateTrimmerUI(state.selectedJ97);
+        updateGlobalBadges();
+        updateDurationBadges();
+        updateDisplay();
+    </script>
+</body>
+</html>
